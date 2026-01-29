@@ -229,27 +229,29 @@ main {
     filter: drop-shadow(0 0 5px rgba(255, 107, 0, 0.4));
 }
 
+/* Botão em estado normal */
 .share-btn {
     background: transparent;
-    /* Borda Laranja para combinar com a marca */
     border: 1px solid var(--accent-color); 
-    /* Texto Laranja */
     color: var(--accent-color); 
-    
-    padding: 8px 20px; /* Aumentei um pouquinho nas laterais */
-    border-radius: 50px; /* Mais redondinho igual ao badge */
+    padding: 8px 20px;
+    border-radius: 50px;
     cursor: pointer;
-    font-family: 'Montserrat', sans-serif; /* Força a fonte certa */
-    font-weight: 600; /* Texto um pouco mais grosso */
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
     font-size: 0.85rem;
     margin-top: 15px;
-    display: inline-flex; /* Alinha o ícone com o texto perfeitamente */
+    display: inline-flex;
     align-items: center;
-    gap: 8px; /* Espaço entre o ícone e o texto */
-    transition: all 0.3s ease;
+    gap: 8px;
+    transition: background 0.2s, color 0.2s; /* Transição rápida */
+    
+    /* REMOVE o azul de seleção que alguns celulares colocam */
+    -webkit-tap-highlight-color: transparent; 
+    outline: none;
 }
 
-/* Isso faz com que o efeito de ficar laranja só aconteça no PC */
+/* APENAS para Computadores (Mouse) */
 @media (hover: hover) {
     .share-btn:hover {
         background: var(--accent-color);
@@ -258,11 +260,16 @@ main {
     }
 }
 
-/* Isso controla o que acontece no momento exato do toque no celular */
+/* No Celular, ele só brilha ENQUANTO o dedo está encostado */
 .share-btn:active {
-    background: var(--accent-color);
-    color: white;
-    transform: scale(0.95); /* Dá um efeito de clique (encolhe um pouco) */
+    background: var(--accent-color) !important;
+    color: white !important;
+}
+
+/* GARANTE que quando o foco sair (pelo JS), ele volte a ser transparente */
+.share-btn:focus {
+    background: transparent;
+    color: var(--accent-color);
 }
 
 /* =========================================
