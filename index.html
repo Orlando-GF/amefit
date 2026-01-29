@@ -111,20 +111,23 @@
     </div>
 
     <script>
-    // Função para abrir o menu de compartilhar do celular
     function shareLink() {
-        if (navigator.share) {
-            navigator.share({
-                title: 'Amefit - Bio',
-                text: 'Confira os links da Amefit!',
-                url: window.location.href,
-            })
-            .catch((error) => console.log('Erro ao compartilhar', error));
-        } else {
-            // Se o navegador não suportar (PC antigo), apenas copia o link
-            alert("Link copiado: " + window.location.href);
-        }
+    if (navigator.share) {
+        navigator.share({
+            title: 'Amefit - Bio',
+            text: 'Confira os links da Amefit!',
+            url: window.location.href,
+        })
+        .then(() => {
+            // Tira o foco do botão para ele voltar a cor original no mobile
+            document.activeElement.blur();
+        })
+        .catch((error) => console.log('Erro ao compartilhar', error));
+    } else {
+        alert("Link copiado: " + window.location.href);
+        document.activeElement.blur(); // Tira o foco aqui também
     }
+}
 </script>
 
 </body>

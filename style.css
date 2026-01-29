@@ -249,10 +249,20 @@ main {
     transition: all 0.3s ease;
 }
 
-.share-btn:hover {
+/* Isso faz com que o efeito de ficar laranja só aconteça no PC */
+@media (hover: hover) {
+    .share-btn:hover {
+        background: var(--accent-color);
+        color: white;
+        box-shadow: 0 4px 10px rgba(255, 107, 0, 0.3);
+    }
+}
+
+/* Isso controla o que acontece no momento exato do toque no celular */
+.share-btn:active {
     background: var(--accent-color);
-    color: white; /* Quando passa o mouse, fica laranja cheio com texto branco */
-    box-shadow: 0 4px 10px rgba(255, 107, 0, 0.3); /* Brilho laranja */
+    color: white;
+    transform: scale(0.95); /* Dá um efeito de clique (encolhe um pouco) */
 }
 
 /* =========================================
