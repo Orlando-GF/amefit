@@ -1,134 +1,170 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Links - Amefit</title>
-    <meta name="theme-color" content="#F7F7F5">
-    <!-- Importando a fonte Montserrat -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amefit | Moda Fitness com Estilo</title>
+    <link rel="icon" type="image/webp" href="imagem/favicon.webp" />
+    <link rel="apple-touch-icon" href="imagem/favicon.webp" />
+    <meta name="theme-color" content="#F7F7F5" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <div class="container">
-        <!-- Cabeçalho com Logo e Bio -->
-        <header>
-            <div class="profile-pic">
-                <!-- Ícone / Coração -->
-                <img src="imagem/icone_logo.webp" alt="Ícone Amefit">
-            </div>
-            
-            <!-- Logo com Nome da Marca -->
-            <img src="imagem/logo.webp" alt="Logo Amefit Oficial" class="logo">
-            
-            <!-- Descrição focada em Marca/Loja -->
-            <p>Moda Fitness com estilo e performance. 🧡✨<br>Enviamos para todo o Brasil 🇧🇷</p>
-            <!-- Botão de Compartilhar -->
-            <button class="share-btn" onclick="shareLink()">
-                🔗 Compartilhar Perfil
-            </button>
-        </header>
+      <!-- Cabeçalho com Logo e Bio -->
+      <header>
+        <div class="profile-pic">
+          <img src="imagem/icone_logo.webp" alt="Ícone Amefit" />
+        </div>
 
-        <!-- Lista de Links (Estratégia de Vendas) -->
-        <main>
-            
-            <!-- CARD 1: O Lançamento (Com Badge de Novidade) -->
-            <!-- Adicionei a classe "destaque" para usar a animação se quiser -->
-            <a href="LINK_DA_NOVA_COLECAO" class="card destaque" style="background-image: url('https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&q=80&w=600');">
-                <div class="badge">NOVIDADE</div> <!-- O Selo -->
-                <div class="overlay"></div>
-                <div class="content">
-                    <span>
-                         NOVA COLEÇÃO <br> <!-- Quebra de linha para o nome ficar embaixo -->
-                        <strong class="highlight-name">RENASCER</strong>
-                    </span>
-                    <small>Veja os looks que acabaram de chegar</small>
-                </div>
-                <div class="icon">➔</div>
-            </a>
+        <img src="imagem/logo.webp" alt="Logo Amefit Oficial" class="logo" />
 
-            <!-- CARD 2: Prova Social (Mais Vendidos) -->
-            <a href="LINK_MAIS_VENDIDOS" class="card" style="background-image: url('https://images.unsplash.com/photo-1483721310020-03333e577078?auto=format&fit=crop&q=80&w=600');">
-                <div class="overlay"></div>
-                <div class="content">
-                    <span>MAIS VENDIDOS 🔥</span>
-                    <small>As queridinhas das nossas clientes</small>
-                </div>
-                <div class="icon">➔</div>
-            </a>
+        <p>
+          Moda Fitness com estilo e performance. 🧡✨<br />Enviamos para todo o
+          Brasil 🇧🇷
+        </p>
+        <!-- Botão de Compartilhar -->
+        <button class="share-btn" onclick="shareLink()">
+          🔗 Compartilhar Perfil
+        </button>
+      </header>
 
-            <!-- CARD 3: Amefit Run (Comunidade) -->
-            <a href="LINK_PARA_O_INSTAGRAM_AMEFITRUN_OU_FOTOS" class="card" style="background-image: url('https://images.unsplash.com/photo-1538805060514-97d9cc17730c?auto=format&fit=crop&q=80&w=600');">
-                <div class="overlay"></div>
-                <div class="content">
-                    <span>AMEFIT RUN 🏃‍♀️</span>
-                    <small>Nossa 1ª corrida! Veja como foi.</small>
-                </div>
-                <div class="icon">➔</div>
-            </a>
+      <!-- Lista de Links (Estratégia de Vendas) -->
+      <main>
+        <!-- CARD 1: O Lançamento (Com Badge de Novidade) -->
+        <a
+          href="LINK_DA_NOVA_COLECAO"
+          class="card destaque"
+          style="
+            background-image: url(&quot;https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&q=80&w=600&quot;);
+          "
+        >
+          <div class="badge">NOVIDADE</div>
+          <!-- O Selo -->
+          <div class="overlay"></div>
+          <div class="content">
+            <span>
+              NOVA COLEÇÃO <br />
 
-            <!-- CARD 4: Retenção (Clube) -->
-            <a href="LINK_DO_CLUBE" class="card" style="background-image: url('https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&q=80&w=600');">
-                <div class="overlay"></div>
-                <div class="content">
-                    <span>CLUBE AMEFIT 🎁</span>
-                    <small>Descontos e vantagens exclusivas</small>
-                </div>
-                <div class="icon">➔</div>
-            </a>
+              <strong class="highlight-name">RENASCER</strong>
+            </span>
+            <small>Veja os looks que acabaram de chegar</small>
+          </div>
+          <div class="icon">➔</div>
+        </a>
 
-            <!-- CARD 5: Loja Geral -->
-            <a href="LINK_DA_LOJA" class="card" style="background-image: url('https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&q=80&w=600');">
-                <div class="overlay"></div>
-                <div class="content">
-                    <span>LOJA COMPLETA</span>
-                    <small>Navegue por todas as categorias</small>
-                </div>
-                <div class="icon">➔</div>
-            </a>
+        <!-- CARD 2: Prova Social (Mais Vendidos) -->
+        <a
+          href="LINK_MAIS_VENDIDOS"
+          class="card"
+          style="
+            background-image: url(&quot;https://images.unsplash.com/photo-1483721310020-03333e577078?auto=format&fit=crop&q=80&w=600&quot;);
+          "
+        >
+          <div class="overlay"></div>
+          <div class="content">
+            <span>MAIS VENDIDOS 🔥</span>
+            <small>As queridinhas das nossas clientes</small>
+          </div>
+          <div class="icon">➔</div>
+        </a>
 
-            <!-- CARD 6: Atendimento (WhatsApp) -->
-            <!-- Foto mais clean/neutra para atendimento -->
-            <a href="LINK_DO_WHATSAPP" class="card" style="background-image: url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=600');">
-                <div class="overlay"></div>
-                <div class="content">
-                    <span>FALE NO WHATSAPP</span>
-                    <small>Dúvidas sobre tamanhos? Chame a gente!</small>
-                </div>
-                <div class="icon">➔</div>
-            </a>
+        <!-- CARD 3: Amefit Run (Comunidade) -->
+        <a
+          href="LINK_PARA_O_INSTAGRAM_AMEFITRUN_OU_FOTOS"
+          class="card"
+          style="
+            background-image: url(&quot;https://images.unsplash.com/photo-1538805060514-97d9cc17730c?auto=format&fit=crop&q=80&w=600&quot;);
+          "
+        >
+          <div class="overlay"></div>
+          <div class="content">
+            <span>AMEFIT RUN 🏃‍♀️</span>
+            <small>Nossa 1ª corrida! Veja como foi.</small>
+          </div>
+          <div class="icon">➔</div>
+        </a>
 
-        </main>
+        <!-- CARD 4: Retenção (Clube) -->
+        <a
+          href="LINK_DO_CLUBE"
+          class="card"
+          style="
+            background-image: url(&quot;https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&q=80&w=600&quot;);
+          "
+        >
+          <div class="overlay"></div>
+          <div class="content">
+            <span>CLUBE AMEFIT 🎁</span>
+            <small>Descontos e vantagens exclusivas</small>
+          </div>
+          <div class="icon">➔</div>
+        </a>
 
-        <footer>
-            <p>© <span id="year"></span> Amefit. Todos os direitos reservados.</p>
-    
-            <script>
-                document.getElementById("year").innerHTML = new Date().getFullYear();
-            </script>
-        </footer>
+        <!-- CARD 5: Loja Geral -->
+        <a
+          href="LINK_DA_LOJA"
+          class="card"
+          style="
+            background-image: url(&quot;https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&q=80&w=600&quot;);
+          "
+        >
+          <div class="overlay"></div>
+          <div class="content">
+            <span>LOJA COMPLETA</span>
+            <small>Navegue por todas as categorias</small>
+          </div>
+          <div class="icon">➔</div>
+        </a>
+
+        <!-- CARD 6: Atendimento (WhatsApp) -->
+        <a
+          href="LINK_DO_WHATSAPP"
+          class="card"
+          style="
+            background-image: url(&quot;https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=600&quot;);
+          "
+        >
+          <div class="overlay"></div>
+          <div class="content">
+            <span>FALE NO WHATSAPP</span>
+            <small>Dúvidas sobre tamanhos? Chame a gente!</small>
+          </div>
+          <div class="icon">➔</div>
+        </a>
+      </main>
+
+      <footer>
+        <p>© <span id="year"></span> Amefit. Todos os direitos reservados.</p>
+
+        <script>
+          document.getElementById("year").innerHTML = new Date().getFullYear();
+        </script>
+      </footer>
     </div>
 
     <script>
-    function shareLink() {
-    if (navigator.share) {
-        navigator.share({
-            title: 'Amefit - Bio',
-            text: 'Confira os links da Amefit!',
-            url: window.location.href,
-        })
-        .then(() => {
-            // Tira o foco do botão para ele voltar a cor original no mobile
-            document.activeElement.blur();
-        })
-        .catch((error) => console.log('Erro ao compartilhar', error));
-    } else {
-        alert("Link copiado: " + window.location.href);
-        document.activeElement.blur(); // Tira o foco aqui também
-    }
-}
-</script>
-
-</body>
+      function shareLink() {
+        if (navigator.share) {
+          navigator
+            .share({
+              title: "Amefit - Bio",
+              text: "Confira os links da Amefit!",
+              url: window.location.href,
+            })
+            .then(() => {
+              document.activeElement.blur();
+            })
+            .catch((error) => console.log("Erro ao compartilhar", error));
+        } else {
+          alert("Link copiado: " + window.location.href);
+          document.activeElement.blur();
+        }
+      }
+    </script>
+  </body>
 </html>

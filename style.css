@@ -2,281 +2,295 @@
    STYLE.CSS - BIO FITNESS (AMEFIT)
    ========================================= */
 
-/* --- Reset Básico --- */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* --- Variáveis de Cores (Paleta) --- */
 :root {
-    --bg-color: #F7F7F5;   /* Areia (Fundo Claro) */
-    --text-color: #2D3436; /* Chumbo (Texto Principal) */
-    --accent-color: #FF6B00; /* Laranja da Marca (Destaque) */
-    --card-height: 140px;
+  --bg-color: #f7f7f5;
+  --text-color: #2d3436;
+  --accent-color: #ff6b00;
+  --card-height: 140px;
 }
 
 /* --- Configuração Geral --- */
 body {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    font-family: 'Montserrat', sans-serif;
-    display: flex;
-    justify-content: center;
-    min-height: 100vh;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
 }
 
 .container {
-    width: 100%;
-    max-width: 480px; /* Tamanho máximo (Mobile) */
-    padding: 40px 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  width: 100%;
+  max-width: 480px;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* =========================================
    CABEÇALHO (HEADER)
    ========================================= */
 header {
-    text-align: center;
-    margin-bottom: 30px;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 /* Foto de Perfil (Círculo) */
 .profile-pic img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    object-fit: cover;
-    
-    /* Estilo Visual */
-    border: 3px solid var(--accent-color); /* Borda Laranja */
-    background: var(--bg-color); /* Fundo para mascarar */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
-    
-    margin-bottom: 15px;
-    padding: 3px; 
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+
+  /* Estilo Visual */
+  border: 3px solid var(--accent-color);
+  background: var(--bg-color);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+  margin-bottom: 15px;
+  padding: 3px;
 }
 
 /* Logo da Empresa (Nome) */
 header .logo {
-    display: block;
-    max-width: 200px;
-    width: 80%;
-    height: auto;
-    margin: 10px auto 20px auto;
-     opacity: 0.80;
+  display: block;
+  max-width: 200px;
+  width: 80%;
+  height: auto;
+  margin: 10px auto 20px auto;
+  opacity: 0.8;
 }
 
 /* Texto da Bio */
 header p {
-    font-weight: 400;
-    font-size: 0.9rem;
-    color: #555555;
-    line-height: 1.4;
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: #555555;
+  line-height: 1.4;
 }
 
 /* =========================================
    CARDS (LINKS)
    ========================================= */
 main {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .card {
-    position: relative; /* Importante para o badge funcionar */
-    height: var(--card-height);
-    width: 100%;
-    border-radius: 16px;
-    text-decoration: none;
-    color: #ffffff !important; /* Texto sempre branco dentro do card */
-    overflow: hidden;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 25px;
-    
-    /* Transições suaves */
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+  position: relative; /* Importante para o badge funcionar */
+  height: var(--card-height);
+  width: 100%;
+  border-radius: 16px;
+  text-decoration: none;
+  color: #ffffff !important; /* Texto sempre branco dentro do card */
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 25px;
+
+  /* Transições suaves */
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 }
 
 /* Cor do texto pequeno dentro do card */
 .card small {
-    color: #e0e0e0 !important;
+  color: #e0e0e0 !important;
 }
 
 /* Efeito Hover (Mouse/Toque) */
-.card:hover, .card:active {
-    transform: scale(1.02);
-    /* Sombra Laranja Brilhante */
-    box-shadow: 0 8px 25px rgba(255, 107, 0, 0.4); 
+.card:hover,
+.card:active {
+  transform: scale(1.02);
+  /* Sombra Laranja Brilhante */
+  box-shadow: 0 8px 25px rgba(255, 107, 0, 0.4);
 }
-
 
 /* Camada Escura (Overlay) */
 .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.3) 100%);
-    z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0.3) 100%
+  );
+  z-index: 1;
 }
 
 /* Conteúdo (Texto e Ícone) */
-.content, .icon {
-    position: relative;
-    z-index: 2; /* Fica acima do overlay */
+.content,
+.icon {
+  position: relative;
+  z-index: 2; /* Fica acima do overlay */
 }
 
 .content {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .content span {
-    font-weight: 800;
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+  font-weight: 800;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .content small {
-    font-weight: 400;
-    font-size: 0.8rem;
-    margin-top: 4px;
+  font-weight: 400;
+  font-size: 0.8rem;
+  margin-top: 4px;
 }
 
 /* Ícone de Seta */
 .icon {
-    font-size: 1.5rem;
-    background: rgba(255,255,255,0.2);
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    backdrop-filter: blur(5px);
+  font-size: 1.5rem;
+  background: rgba(255, 255, 255, 0.2);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(5px);
 }
 
 /* Ajuste para o texto não bater no selo de Novidade */
 .card.destaque .content {
-    max-width: 70%; /* O texto vai ocupar menos espaço e quebrar a linha antes */
+  max-width: 70%; /* O texto vai ocupar menos espaço e quebrar a linha antes */
 }
 
 /* =========================================
    NOVO: ESTILO DO SELO (BADGE)
    ========================================= */
 .badge {
-    position: absolute; /* Flutua sobre o card */
-    top: 15px;
-    right: 15px;
-    
-    background-color: var(--accent-color); /* Fundo Laranja */
-    color: white;
-    
-    padding: 5px 12px;
-    border-radius: 20px; /* Formato de pílula */
-    font-size: 0.7rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    
-    z-index: 10; /* Fica acima de tudo */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  position: absolute; /* Flutua sobre o card */
+  top: 15px;
+  right: 15px;
+
+  background-color: var(--accent-color); /* Fundo Laranja */
+  color: white;
+
+  padding: 5px 12px;
+  border-radius: 20px; /* Formato de pílula */
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+
+  z-index: 10; /* Fica acima de tudo */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 /* Opcional: Animação de pulso para o card destaque */
 @keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.02); }
-    100% { transform: scale(1); }
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .card.destaque {
-    border: 1px solid var(--accent-color);
-    animation: pulse 2s infinite ease-in-out;
+  border: 1px solid var(--accent-color);
+  animation: pulse 2s infinite ease-in-out;
 }
 
 /* Estilo específico para o título "NOVA COLEÇÃO" */
 .collection-title {
-    font-size: 0.9rem; /* Um pouco menor para dar espaço ao nome */
-    font-weight: 600;
-    line-height: 1.2; /* Aproxima as linhas */
-    display: block; /* Garante que comporte a quebra de linha */
+  font-size: 0.9rem; /* Um pouco menor para dar espaço ao nome */
+  font-weight: 600;
+  line-height: 1.2; /* Aproxima as linhas */
+  display: block; /* Garante que comporte a quebra de linha */
 }
 
 /* O destaque do nome RENASCER */
 .highlight-name {
-    color: var(--accent-color); /* Aquele Laranja #FF6B00 */
-    font-size: 1.6rem; /* Bem grande! */
-    font-weight: 900; /* Extra negrito */
-    letter-spacing: 2px; /* Espaçamento entre letras (fica chique) */
-    text-transform: uppercase;
-    text-shadow: 0 2px 15px rgba(0,0,0,0.8); /* Sombra forte para ler bem na foto */
-    
-    /* Um brilho extra sutil no texto */
-    filter: drop-shadow(0 0 5px rgba(255, 107, 0, 0.4));
+  color: var(--accent-color); /* Aquele Laranja #FF6B00 */
+  font-size: 1.6rem; /* Bem grande! */
+  font-weight: 900; /* Extra negrito */
+  letter-spacing: 2px; /* Espaçamento entre letras (fica chique) */
+  text-transform: uppercase;
+  text-shadow: 0 2px 15px rgba(0, 0, 0, 0.8); /* Sombra forte para ler bem na foto */
+
+  /* Um brilho extra sutil no texto */
+  filter: drop-shadow(0 0 5px rgba(255, 107, 0, 0.4));
 }
 
 /* Botão em estado normal */
 .share-btn {
-    background: transparent;
-    border: 1px solid var(--accent-color); 
-    color: var(--accent-color); 
-    padding: 8px 20px;
-    border-radius: 50px;
-    cursor: pointer;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    font-size: 0.85rem;
-    margin-top: 15px;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    transition: background 0.2s, color 0.2s; /* Transição rápida */
-    
-    /* REMOVE o azul de seleção que alguns celulares colocam */
-    -webkit-tap-highlight-color: transparent; 
-    outline: none;
+  background: transparent;
+  border: 1px solid var(--accent-color);
+  color: var(--accent-color);
+  padding: 8px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 0.85rem;
+  margin-top: 15px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition:
+    background 0.2s,
+    color 0.2s; /* Transição rápida */
+
+  /* REMOVE o azul de seleção que alguns celulares colocam */
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
 }
 
 /* APENAS para Computadores (Mouse) */
 @media (hover: hover) {
-    .share-btn:hover {
-        background: var(--accent-color);
-        color: white;
-    }
+  .share-btn:hover {
+    background: var(--accent-color);
+    color: white;
+  }
 }
 
 /* No Celular, ele só brilha ENQUANTO o dedo está encostado */
 .share-btn:active {
-    background: var(--accent-color) !important;
-    color: white !important;
+  background: var(--accent-color) !important;
+  color: white !important;
 }
 
 /* GARANTE que quando o foco sair (pelo JS), ele volte a ser transparente */
 .share-btn:focus {
-    background: transparent;
-    color: var(--accent-color);
+  background: transparent;
+  color: var(--accent-color);
 }
 
 /* =========================================
    RODAPÉ (FOOTER)
    ========================================= */
 footer {
-    margin-top: 40px;
-    font-size: 0.7rem;
-    color: #888888;
-    text-align: center;
+  margin-top: 40px;
+  font-size: 0.7rem;
+  color: #888888;
+  text-align: center;
 }
