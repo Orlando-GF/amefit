@@ -256,7 +256,6 @@ main {
     .share-btn:hover {
         background: var(--accent-color);
         color: white;
-        box-shadow: 0 4px 10px rgba(255, 107, 0, 0.3);
     }
 }
 
